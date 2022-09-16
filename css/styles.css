@@ -490,13 +490,18 @@ p {
   position: absolute;
   width: 528px;
   height: 581px;
-  left: calc(50% - 264px);
-  top: calc(50% - 290px);
+
+  /* left: calc(50% - 264px);
+  top: calc(50% - 290px); */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
   background: var(--window--bg-main-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   /* transition: box-shadow var(--main-transition); */
+  transition: transform var(--main-transition);
 }
 
 .modal-close-button {
@@ -513,12 +518,18 @@ p {
   background: var(--window--bg-main-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition: transform var(--main-transition);
 }
 
 .is-hidden {
   visibility:hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.is-hidden .modal-window {
+  transform: scale(0.5, 0.5);
 }
 
 /* Portfolio page */
