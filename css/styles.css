@@ -17,9 +17,11 @@
   --main-bg-color: #2f303a;
   --secondary-bg-color: #f5f4fa;
   --card--bg-main-color: #ffffff;
+  --window--bg-main-color: #ffffff;
   --button-bg-main-color: #2196f3;
   --button-bg-secondary-color: #f5f4fa;
   --overlay-main-color: rgba(33, 150, 243, 0.9);
+  --backdrop-main-color: rgba(0, 0, 0, 0.2);
 
   /* border colors */
   --main-border-color: #eeeeee;
@@ -452,6 +454,60 @@ p {
   color: var(--secondary-icon-color);
   background-color: var(--icon-bg-footer-color);
 }
+
+/* Modal window */
+.backdrop {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+
+  background: var(--backdrop-main-color);
+}
+
+.data-modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+
+  background: var(--backdrop-main-color);
+}
+
+
+.modal-window {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  left: calc(50% - 264px);
+  top: calc(50% - 290px);
+
+  background: var(--window--bg-main-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.data-modal-close {
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+
+  background: var(--window--bg-main-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.is-hidden {
+  visibility:hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 /* Portfolio page */
 .filters-list {
