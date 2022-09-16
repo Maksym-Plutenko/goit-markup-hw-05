@@ -44,10 +44,10 @@
               <a class="header-navigation-link active" href="./index.html">Студія</a>
             </li>
             <li class="header-navigation-item">
-              <a class="header-navigation-link" href="./portfolio.html">Портфоліо</a>
+              <a class="header-navigation-link active" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="header-navigation-item">
-              <a class="header-navigation-link" href="#footer">Контакти</a>
+              <a class="header-navigation-link active" href="#footer">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -79,7 +79,7 @@
       <section class="front">
         <div class="container front-container">
           <h1 class="front-title">Ефективні рішення для<br />вашого бізнесу</h1>
-          <button class="data-modal-open front-btn" type="button">Замовити послугу</button>
+          <button class="front-btn" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -461,17 +461,15 @@
     </footer>
 
     <!--Modal window-->
-    <div class="data-modal is-hidden">
-      <div class="modal-window">
-        <button class="data-modal-close " type="button">
-          x
+    <div class=" backdrop modal-element is-hidden" data-modal>
+      <div class="modal-window modal-element">
+        <button class="modal-close-button modal-element" type="button" data-modal-close>
+          <svg class="close-button-icon modal-element" width="11px" height="11px">
+            <use href="./images/icons.svg#close-button"></use>
+          </svg>
         </button>
       </div>
-      
     </div>
-    
-
-    <!--is-hidden-->
 
     <!-- Script for modal window -->
     <script src="./js/modal.js"></script>
