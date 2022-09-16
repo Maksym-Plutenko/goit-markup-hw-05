@@ -283,12 +283,37 @@ p {
   justify-content: center;
 }
 
+.activity-item {
+  position: relative;
+}
+
 .activity-item-img {
   display: block;
 }
 
 .activity-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.activity-item-description {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.activity-item-description-text {
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--light-text-color);
 }
 
 /* Team */
